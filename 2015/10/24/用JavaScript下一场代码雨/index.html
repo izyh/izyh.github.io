@@ -1,0 +1,444 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>用JavaScript下一场代码雨 | izyh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="izyh">
+    
+
+    
+    <meta name="description" content="当初看完「黑客帝国(Matrix)」是否有一种脑洞大开的感觉？现实和虚幻傻傻分不清楚，俨然一个科幻版庄周梦蝶。同样让你印象深刻的是不是还有那台所谓现实世界中的电脑？屏幕上唰唰唰的下着代码雨，一猿说他能透过代码看到丰富多彩的虚拟世界！！！这个B装的，给满分！不过话说回来，这代码雨的效果还是科技感十足的。这不，我就用它来做网站的banner了，说好一起的，这特么不能全让你装了啊！好了，调侃完「黑客帝国">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用JavaScript下一场代码雨">
+<meta property="og:url" content="http://izyh.xyz/2015/10/24/用JavaScript下一场代码雨/index.html">
+<meta property="og:site_name" content="izyh">
+<meta property="og:description" content="当初看完「黑客帝国(Matrix)」是否有一种脑洞大开的感觉？现实和虚幻傻傻分不清楚，俨然一个科幻版庄周梦蝶。同样让你印象深刻的是不是还有那台所谓现实世界中的电脑？屏幕上唰唰唰的下着代码雨，一猿说他能透过代码看到丰富多彩的虚拟世界！！！这个B装的，给满分！不过话说回来，这代码雨的效果还是科技感十足的。这不，我就用它来做网站的banner了，说好一起的，这特么不能全让你装了啊！好了，调侃完「黑客帝国">
+<meta property="og:updated_time" content="2015-10-31T17:30:44.190Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用JavaScript下一场代码雨">
+<meta name="twitter:description" content="当初看完「黑客帝国(Matrix)」是否有一种脑洞大开的感觉？现实和虚幻傻傻分不清楚，俨然一个科幻版庄周梦蝶。同样让你印象深刻的是不是还有那台所谓现实世界中的电脑？屏幕上唰唰唰的下着代码雨，一猿说他能透过代码看到丰富多彩的虚拟世界！！！这个B装的，给满分！不过话说回来，这代码雨的效果还是科技感十足的。这不，我就用它来做网站的banner了，说好一起的，这特么不能全让你装了啊！好了，调侃完「黑客帝国">
+
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div id="header">
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="izyh" title="izyh"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="izyh">izyh</a></h1>
+				<h2 class="blog-motto">庄裕浩的技术博客</h2>
+				<h2 class="blog-motto">分享web开发学习心得</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+						<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
+							<label>Search</label>
+						<input type="text" id="bdcsMain" autocomplete="off" name="q" maxlength="20" placeholder="搜索" />
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+<script type="text/javascript">
+    height=window.innerHeight;
+    width=window.innerWidth;
+	var context=document.getCSSCanvasContext("2d", "matrix", width, height);
+  	var drop=[];
+  	var font_size=20;
+  	var columns=width/font_size;
+  	for(var i=0;i<columns;i++)
+  		drop[i]=1;
+  	
+  	function drawMatrix(){
+  
+  	    context.fillStyle="rgba(0, 0, 0, 0.1)"; 
+  	    context.fillRect(0,0,width,height);
+  
+  	    context.fillStyle="green";
+  	    context.font=font_size+"px";
+  	    for(var i=0;i<columns;i++){
+  		  context.fillText(Math.floor(Math.random()*2),i*font_size,drop[i]*font_size);/*get 0 and 1*/
+  
+  		  if(drop[i]*font_size>(height*2/3)&&Math.random()>0.85)/*reset*/
+  			drop[i]=0;
+  		    drop[i]++;
+  	      }
+    }
+  	setInterval(drawMatrix,40);
+</script>
+    </header>
+    <div id="container">
+      <!--div id="main" class="post" itemscope itemprop="blogPost"--><!--为了使去掉侧边栏后#main居中-->
+<div id="main" class="moveMain" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/10/24/用JavaScript下一场代码雨/" title="用JavaScript下一场代码雨" itemprop="url">用JavaScript下一场代码雨</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="izyh" target="_blank" itemprop="author">izyh</a>
+		
+  <p class="article-time">
+    <time datetime="2015-10-24T09:05:11.000Z" itemprop="datePublished"> 发表于 2015-10-24</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#代码雨的实现思路"><span class="toc-number">1.</span> <span class="toc-text">代码雨的实现思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#具体的代码实现"><span class="toc-number">2.</span> <span class="toc-text">具体的代码实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#完整代码"><span class="toc-number">2.1.</span> <span class="toc-text">完整代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#-webkit-canvas"><span class="toc-number">2.2.</span> <span class="toc-text">-webkit-canvas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getCSSCanvasContext()"><span class="toc-number">2.3.</span> <span class="toc-text">getCSSCanvasContext()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#drawMatrixRow()函数"><span class="toc-number">2.4.</span> <span class="toc-text">drawMatrixRow()函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li></ol>
+		
+		</div>
+		
+		<p>当初看完「黑客帝国(Matrix)」是否有一种脑洞大开的感觉？现实和虚幻傻傻分不清楚，俨然一个科幻版庄周梦蝶。同样让你印象深刻的是不是还有那台所谓现实世界中的电脑？屏幕上唰唰唰的下着代码雨，一猿说他能透过代码看到丰富多彩的虚拟世界！！！这个B装的，给满分！不过话说回来，这代码雨的效果还是科技感十足的。这不，我就用它来做网站的<code>banner</code>了，说好一起的，这特么不能全让你装了啊！好了，调侃完「黑客帝国」，现在就来具体说说怎么通过<code>JavaScript</code>和<code>Canvas</code>让<code>banner</code>下一场代码雨。</p>
+<h2 id="代码雨的实现思路">代码雨的实现思路</h2><ol>
+<li>获取<code>bannner</code>的宽度和高度，并新建一个和<code>banner</code>一样大小的画布<code>Canvas</code>；</li>
+<li>在画布上画黑色矩形，使其填充整块画布，渲染代码雨的黑色背景；</li>
+<li>随机生成<code>0</code>或<code>1</code>，借助<code>fillText()</code>函数将随机生成的文本绘制到画布上，并设置文本的颜色为绿色；</li>
+<li>重复第3点，以类似于显示器显示原理的行列扫描方式将随机生成的文本不断绘制到画布上，直到扫描完整个画布再回到第一行重新扫描；</li>
+<li>由于在画布上绘制文本这种方式不像显示器的行列扫描那样过一段时间会自动消失，因此当整个画布扫描完一遍后进行第二次扫描时，新绘制的文本并不会刷新之前绘制的文本，而是直接一层层叠加上去。为了实现文本绘制后逐渐消失直至被刷新的效果，可以在每次绘制文本时再填充一层有一定透明度的黑色矩形，这样先绘制的文本就会因为被越来越多的具有一定透明度的黑色矩形遮挡而逐渐消失，达到逐渐模糊消失再重新刷新的效果；</li>
+<li>为了使每一列的扫描呈现差异性和随机性，我们可以让每一列的行扫描是随机的，这样不同的列就会在扫描完不同的行数后返回到第一行进行下一次扫描，使每一列看起来都是独立刷新的。</li>
+<li>最后在画布上完成代码雨的效果后，我们只要将其设置为<code>banner</code>所在<code>div</code>的背景图片就可以实现在<code>banner</code>上下代码雨的效果了。<h2 id="具体的代码实现">具体的代码实现</h2><h3 id="完整代码">完整代码</h3>先贴一下完整的代码实现，再介绍具体细节：<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">title</span>&gt;</span>Code rain in banner.<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span><br><span class="line">	  <span class="id">#banner</span><span class="rules">&#123;</span><br><span class="line">	    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">		<span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">2.8em</span> <span class="number">0.5em</span> <span class="number">0.8em</span> <span class="number">0.5em</span></span></span>;</span><br><span class="line">		<span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">50%</span></span></span>;</span><br><span class="line">		<span class="rule"><span class="attribute">color</span>:<span class="value"> red</span></span>;</span><br><span class="line">	    <span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">-webkit-canvas</span>(matrix)</span></span>;</span><br><span class="line">		&#125;</span></span><br><span class="line">	</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">	  height=<span class="built_in">window</span>.innerHeight;</span><br><span class="line">      width=<span class="built_in">window</span>.innerWidth;</span><br><span class="line">	  <span class="keyword">var</span> context=<span class="built_in">document</span>.getCSSCanvasContext(<span class="string">"2d"</span>, <span class="string">"matrix"</span>, width, height);</span><br><span class="line">  	  <span class="keyword">var</span> row=[];</span><br><span class="line">  	  <span class="keyword">var</span> font_size=<span class="number">20</span>;</span><br><span class="line">  	  <span class="keyword">var</span> columns=width/font_size;</span><br><span class="line">  	  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;columns;i++)</span><br><span class="line">  		  row[i]=<span class="number">1</span>;</span><br><span class="line">  	</span><br><span class="line">  	  <span class="function"><span class="keyword">function</span> <span class="title">drawMatrixRow</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  	    context.fillStyle=<span class="string">"rgba(0, 0, 0, 0.1)"</span>; </span><br><span class="line">  	    context.fillRect(<span class="number">0</span>,<span class="number">0</span>,width,height);</span><br><span class="line">  	    context.fillStyle=<span class="string">"green"</span>;</span><br><span class="line">  	    context.font=font_size+<span class="string">"px"</span>;</span><br><span class="line">  	    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;columns;i++)&#123;</span><br><span class="line">  		  context.fillText(<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*<span class="number">2</span>),i*font_size,row[i]*font_size);</span><br><span class="line">  		  <span class="keyword">if</span>(row[i]*font_size&gt;(height*<span class="number">2</span>/<span class="number">3</span>)&amp;&amp;<span class="built_in">Math</span>.random()&gt;<span class="number">0.85</span>)</span><br><span class="line">  			row[i]=<span class="number">0</span>;</span><br><span class="line">  		  row[i]++;</span><br><span class="line">  	      &#125;</span><br><span class="line">        &#125;</span><br><span class="line">  	  setInterval(drawMatrixRow,<span class="number">40</span>);</span><br><span class="line">    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"banner"</span>&gt;</span>banner中原有的内容。。。<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>实际使用中可以很方便将<code>style</code>和<code>script</code>部分的代码分别放到css和js文件中，实现很好的结构、样式和行为的分离，代码雨的效果也可以很容易复用到其他地方。这里只是作为一个例子，所以就都写到一个<code>html</code>文件中啦！</p>
+<h3 id="-webkit-canvas">-webkit-canvas</h3><p>样式的设置没有太多特别的，不过<code>background-image</code>的设置是重点。-webkit-canvas是webkit提出的一种用于解决将<code>canvas</code>设置为其他元素背景图片的方法，目前Chrom、Saferi、Opera、ios Saferi和Android Browser等多数主流的浏览器都支持这一特性，使用起来也特别简单，只要将<code>canvas</code>的标识符(在这里是指“Matrix”)传递进来就可以了。IE浏览器并不支持这一特性，所以在IE中打开只能看到黑色的背景，如果想兼容IE浏览器可以通过<code>canvas.toDataURL</code>方法。这种方法将图片转换成了<code>data</code>类型的<code>URL</code>，虽然也能实现将<code>canvas</code>作为其他元素背景图片的功能，但是使用起来感觉很不优雅，浏览器要不断加载图片，对资源消耗也比较大，在资源比较有限的设备如手机的浏览器中可以看出明显缺陷，因此这里并不打算兼容IE浏览器(连微软自己都不好意思再用了:cold_sweat:)，也不再深入说明。<br>另外有一点要注意的是，为了使画布能铺满整个<code>banner</code>，所以其外边框<code>margin</code>要设置为<code>0</code>，要使内部元素不贴到边框上只能通过设置它的内边框<code>padding</code>。</p>
+<h3 id="getCSSCanvasContext()">getCSSCanvasContext()</h3><p>要用<code>canvas</code>作为背景图片并不需要显式地将其创建出来，只要通过<code>CanvasRenderingContext getCSSCanvasContext(contextType, identifier, width, height);</code>函数就可以返回标志为<code>identifier</code>的<code>canvas</code>的绘图环境。其中参数<code>contextType</code>为绘图的类型，目前唯一的合法值为<code>2d</code>，即绘制二维图形；<code>identifier</code>指定canvas的标识，这里命名为<code>matrix</code>；<code>width</code>和<code>height</code>指定canvas的宽度和高度，这里通过<code>window.innerWidth</code>和<code>window.innerHeight</code>获取banner窗口的宽度和高度，使canvas覆盖整个banner。<br>获得绘图环境变量<code>context</code>后我们就可以在canvas上进行绘图操作了，接下来还要定义用于行扫描和列扫描计数的变量，其中扫描的列数columns由视口宽度/字体大小来确定，每一列的行扫描计数存放到row[columns-1]数组中，并以其对应的列标识作为下标。</p>
+<h3 id="drawMatrixRow()函数">drawMatrixRow()函数</h3><p>根据上面提到的绘图思路，我们采用的是行列扫描的方法，因此<code>drawMatrixRow()</code>函数需要绘制出一行的图案，然后通过<code>setInterval(drawMatrixRow,40)</code>每隔一定时间间隔(这里是40ms，你也可以调整到自己认为合适的其它值)调用一次绘制出一行，最后让每次绘制的行都叠加到一起合成完整的代码雨效果。需要注意的是，这里的“一行”并不是指每列绘制的文本具有相同的y坐标值，而是说每一列都会增加一个新绘制的行，事实上由于加入了随机效果，除了第一次列扫描外，通常情况下它们的y坐标是各不相同的。<br>现在我们就来看一下如何绘制出一行的文本，根据上面的绘图思路，每次绘制文本之前要覆盖一层黑色透明的背景（参考第25、26行代码），以实现之前绘制的文本逐渐消失的效果，这里通过RGBA进行设置。透明度的取值介于0~1之间，不能取0和1，否则会看到文本一层层叠在一起或只看到一行文本。透明度取值小代码雨密集，取值大代码雨稀疏，可以根据自己的喜好进行设置。<code>Math.random()</code>函数用来产生0~1的随机数，<code>Math.floor()</code>函数可以用来对浮点数向下取整，因此为了随机产生0或1，要通过<code>Math.random()*2</code>来产生0~2的随机数。for循环实现了列扫描，并在扫描好一列后通过<code>row[i]++</code>将行数指向下一行，方便下一次列扫描的定位。第31行的if判断语句用来确定什么时候返回第一行“刷新”之前绘制的文本，这里我们将返回的时机确定在列扫描超过2/3视口之后的某一刻，并引入一个随机数使各列返回的实际时机都不一样。当然你也可以选择在列扫描完整个视口后的某一随机时刻返回，不过这会导致中间有一段较明显的中断时间。引入随机因素<code>Math.random()&gt;0.85</code>是很有必要的，不然你会看到每次调用<code>drawMatrixRow()</code>函数绘制的文本y坐标都一样，没有任何差异性和随机效果。函数<code>fillText(text,x,y,maxWidth)</code>用来向canvas中绘制文本，第一个参数<code>text</code>指定了要绘制的文本，这里是随机生成的0或1，第二、三个参数指定绘制文本的坐标，这里通过行列编号及字体大小确定具体坐标值，最后一个参数是可选参数，用于设置最大允许的文本宽度，这里不需要用到。就这样我们将文本一行行绘制到canvas上，实现了代码雨的动态效果。</p>
+<h2 id="总结">总结</h2><p>总的来看，在banner上下一场代码雨并不困难，只要弄清如何通过行列扫描在canvas上绘制文本，以及如何将canvas设置为其他元素的背景图片就可以了。当然除了0和1外，你也可以下点其它东西，给你的banner也来一场绵绵细雨吧！</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://izyh.xyz/2015/10/24/用JavaScript下一场代码雨/" data-title="用JavaScript下一场代码雨 | izyh" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+	
+<section id="comments" class="comment">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2015/10/24/用JavaScript下一场代码雨/" data-title="用JavaScript下一场代码雨" data-url="http://izyh.xyz/2015/10/24/用JavaScript下一场代码雨/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"coocool"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+	<!--原有多说评论框代码：div class="ds-thread" data-thread-key="2015/10/24/用JavaScript下一场代码雨/" data-title="用JavaScript下一场代码雨" data-url="http://izyh.xyz/2015/10/24/用JavaScript下一场代码雨/"></div-->
+</section>
+
+
+</div>  
+      <!--%- partial('_partial/sidebar',{item: page,table: true}) %-->
+    </div>
+    <footer><div id="footer" >
+	
+	
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<!--p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="izyh">izyh</a>
+		
+		
+		</p-->
+		
+		<p class="copyright">
+		© 2015 
+		
+		<a href="/about" target="_blank" title="izyh">庄裕浩</a>
+		
+		<br>
+		专注Web开发
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"coocool"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<!-- Baidu_search Begin -->
+
+<script type="text/javascript">
+(function(){
+    document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));
+    var bdcs = document.createElement('script');
+	bdcs.type = 'text/javascript';
+	bdcs.async = true;
+	bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=13131138461650399244' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(bdcs, s);})();
+</script>
+
+<!-- Baidu_search End -->
+
+  </body>
+</html>
